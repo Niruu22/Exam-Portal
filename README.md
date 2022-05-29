@@ -3,10 +3,10 @@
 
 *	Candidates can appear for the exam using any desktop, laptop, or mobile device with a browser. Exam results can be generated instantly for the objective type of         questions.
 
-                                                            MODULE SPECIFICATION
+                                          MODULE SPECIFICATION
 * In this project, I use Angular, Spring Boot and MySQL database . It has two modules Admin and	Users (Student)
 
-                                                           SYSTEM REQUIREIMENT
+                                           SYSTEM REQUIREIMENT
 *	Software Requirement:
 
 1.	Angular Framework.
