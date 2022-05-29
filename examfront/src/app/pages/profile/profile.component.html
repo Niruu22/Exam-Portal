@@ -1,0 +1,57 @@
+<mat-card *ngIf="user">
+    <h1>Your Profile Details</h1>
+    
+    <mat-card-content>
+        <div class="bootstrap-wrapper">
+            <div class="container">
+                <div class="container text-center">
+                    
+                    <img src="../../../assets/niru.jpg" alt="" class="profile-image"  />
+
+                    <h1 class="mt20">  {{login.getUser().firstName}} {{login.getUser().lastName}} Patil</h1>
+                </div>
+
+
+               
+                <div class="row">
+                    <div class="col-md-10 offset-md-1">
+
+                        <!--//tables details-->
+
+                        <table class="table text-center">
+
+                            <tr>
+                                <td>Username</td>
+                                <td>{{login.getUser().username}} </td>
+                              </tr>
+                              <tr>
+                                <td>Userid</td>
+                                <td>EXAM{{login.getUser().id}}</td>
+                              </tr>
+                              <tr>
+                                <td>Phone</td>
+                                <td>{{login.getUser().phone}}</td>
+                              </tr>
+                              <tr>
+                                <td>Role</td>
+                                <td>{{login.getUser().authorities[0].authority}}</td>
+                              </tr>
+                              <tr>
+                                <td>Status</td>
+                                <td>{{ login.getUser().enabled ? "ACTIVE" : "NOTACTIVE" }}</td>
+                              </tr>
+                        </table>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </mat-card-content>
+    <mat-card-actions class="text-center">
+        <button mat-raised-button color="primary">Update</button>
+        <button mat-raised-button color="accent">SHARE</button>
+      </mat-card-actions>
+
+</mat-card>

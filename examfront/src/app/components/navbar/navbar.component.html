@@ -1,0 +1,49 @@
+
+<mat-toolbar color="warn">
+  <a
+  routerLink="/"
+  mat-icon-button
+  class="example-icon"
+  aria-label="Example icon-button with menu icon"
+>
+  <mat-icon>menu_book</mat-icon>
+</a>
+
+    <span>Dr.D Y PATIL SCHOOL OF MCA</span>
+    <span class="example-spacer"></span>
+    <a 
+    *ngIf="!isLoggedIn"
+    [routerLink]="'/login'" 
+      mat-icon-button class="example-icon favorite-icon " aria-label="Example icon-button with heart icon">
+      
+      Login
+      
+    </a>
+
+    <a 
+    *ngIf="!isLoggedIn"
+    [routerLink]="'/signup'" 
+    mat-icon-button class="example-icon favorite-icon mr20 ml20" aria-label="Example icon-button with share icon">
+      Register
+    </a>
+
+
+   
+    <a 
+    (click)="logout()"
+    *ngIf="isLoggedIn"
+    mat-icon-button class="example-icon favorite-icon mr20 ml20" aria-label="Example icon-button with share icon">
+      Logout
+    </a>
+
+    <button
+    *ngIf="isLoggedIn && user"
+     class="example-icon favorite-icon ml20" 
+     mat-button
+     routerLink="/admin/profile"
+     aria-label="Example icon-button with share icon">
+     
+     {{login.getUser().username}}
+
+  </button>
+  </mat-toolbar>
